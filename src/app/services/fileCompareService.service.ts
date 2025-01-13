@@ -323,7 +323,7 @@ export class FileCompareService {
                     fileToSave.references.push({
                         'concepts': k.nodes.length > 0 ? k.nodes : [],
                         'name': k.title.length > 0 ? k.title : ' ',
-                        'description': k.description.length > 0 ? k.description : ' ',
+                        'description': (k.description != null && k.description.length > 0) ? k.description : ' ',
                         'url': (k.url != null && k.url.length > 0) ? k.url : ' '
                     });
                 }
